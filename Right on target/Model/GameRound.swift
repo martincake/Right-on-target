@@ -29,7 +29,7 @@ class GameRound: GameRoundProtocol {
     func calculateScore(with value: Int) {
         if value > currentSecretValue {
             score += 50 - value + currentSecretValue
-        } else if value < currentSecretValue {
+        } else if value < currentSecretValue { 
             score += 50 + value - currentSecretValue
         } else {
             score += 50

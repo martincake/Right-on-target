@@ -90,12 +90,15 @@ class ViewController: UIViewController {
     
     // отображение всплывающего окна со счетом
     private func showAlertWith(score: Int) {
+        // создаем View
         let alert = UIAlertController(title: "Игра окончена",
                                       message: "Вы заработали \(score) очков",
                                       preferredStyle: .alert)
+        // добавляем в него действие
         alert.addAction(UIAlertAction(title: "Начать заново",
                                       style: .default,
                                       handler: nil))
+        // отображаем View на экране
         self.present(alert, animated: true, completion: nil)
     }
 }
