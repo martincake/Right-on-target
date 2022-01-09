@@ -29,10 +29,12 @@ class ViewController: UIViewController {
         
         print("viewDidLoad")
         
+        // создаем генератор случайных чисел
+        let generator = NumberGenerator(startValue: 1, endValue: 50)!
         // создаем экземпляр сущности "Игра"
-        game = Game(startValue: 1, endValue: 50, rounds: 5)
+        game = Game(valueGenerator: generator, rounds: 5)
         // обновляем данные о текущем значении загаданного числа
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
     @IBAction func checkNumber() {
         
         // высчитываем очки за раунд
-        game.calculateScore(with: Int(slider.value))
+        game.currentRound.calculateScore(with: Int(slider.value))
         // проверяем, окончена ли игра
         if game.isGameEnded {
             showAlertWith(score: game.score)
@@ -76,7 +78,7 @@ class ViewController: UIViewController {
             game.startNewRound()
         }
         // обновляем данные о текущем значении загаданного числа
-        updateLabelWithSecretNumber(newText: String(game.currentSecretValue))
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
     }
     
     //MARK: - Обновление View

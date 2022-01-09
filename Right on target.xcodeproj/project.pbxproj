@@ -14,6 +14,8 @@
 		1628C98B278AB9A200C577C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1628C98A278AB9A200C577C9 /* Assets.xcassets */; };
 		1628C98E278AB9A200C577C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1628C98C278AB9A200C577C9 /* LaunchScreen.storyboard */; };
 		1628C99B278AF73200C577C9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1628C99A278AF73200C577C9 /* Game.swift */; };
+		1628C99D278B093C00C577C9 /* GameRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1628C99C278B093C00C577C9 /* GameRound.swift */; };
+		1628C99F278B094B00C577C9 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1628C99E278B094B00C577C9 /* Generator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1628C98D278AB9A200C577C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1628C98F278AB9A200C577C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1628C99A278AF73200C577C9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1628C99C278B093C00C577C9 /* GameRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRound.swift; sourceTree = "<group>"; };
+		1628C99E278B094B00C577C9 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				1628C99A278AF73200C577C9 /* Game.swift */,
+				1628C99C278B093C00C577C9 /* GameRound.swift */,
+				1628C99E278B094B00C577C9 /* Generator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1628C986278AB9A100C577C9 /* ViewController.swift in Sources */,
+				1628C99F278B094B00C577C9 /* Generator.swift in Sources */,
 				1628C982278AB9A100C577C9 /* AppDelegate.swift in Sources */,
 				1628C984278AB9A100C577C9 /* SceneDelegate.swift in Sources */,
+				1628C99D278B093C00C577C9 /* GameRound.swift in Sources */,
 				1628C99B278AF73200C577C9 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
