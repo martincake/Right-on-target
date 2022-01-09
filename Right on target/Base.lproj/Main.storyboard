@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="01.square.fill" catalog="system" maximumValueImage="50.square.fill" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-Yq-7dq">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="1" maxValue="50" minimumValueImage="01.square.fill" catalog="system" maximumValueImage="50.square.fill" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-Yq-7dq">
                                 <rect key="frame" x="62" y="192" width="772" height="31"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
@@ -29,6 +29,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Проверить">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpr-qO-x1v"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-MQ-bqO">
                                 <rect key="frame" x="443" y="320" width="10.5" height="21"/>
@@ -49,6 +52,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K7c-Yq-7dq" secondAttribute="trailing" constant="20" id="wEz-E1-zWS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="WSa-MQ-bqO" id="bp8-Jk-J0H"/>
+                        <outlet property="slider" destination="K7c-Yq-7dq" id="iHB-4V-by4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
