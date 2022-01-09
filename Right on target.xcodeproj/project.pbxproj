@@ -13,6 +13,7 @@
 		1628C989278AB9A100C577C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1628C987278AB9A100C577C9 /* Main.storyboard */; };
 		1628C98B278AB9A200C577C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1628C98A278AB9A200C577C9 /* Assets.xcassets */; };
 		1628C98E278AB9A200C577C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1628C98C278AB9A200C577C9 /* LaunchScreen.storyboard */; };
+		1628C996278AE2D800C577C9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1628C995278AE2D800C577C9 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1628C98A278AB9A200C577C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1628C98D278AB9A200C577C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1628C98F278AB9A200C577C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1628C995278AE2D800C577C9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				1628C981278AB9A100C577C9 /* AppDelegate.swift */,
 				1628C983278AB9A100C577C9 /* SceneDelegate.swift */,
 				1628C985278AB9A100C577C9 /* ViewController.swift */,
+				1628C995278AE2D800C577C9 /* SecondViewController.swift */,
 				1628C987278AB9A100C577C9 /* Main.storyboard */,
 				1628C98A278AB9A200C577C9 /* Assets.xcassets */,
 				1628C98C278AB9A200C577C9 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1628C996278AE2D800C577C9 /* SecondViewController.swift in Sources */,
 				1628C986278AB9A100C577C9 /* ViewController.swift in Sources */,
 				1628C982278AB9A100C577C9 /* AppDelegate.swift in Sources */,
 				1628C984278AB9A100C577C9 /* SceneDelegate.swift in Sources */,
@@ -302,7 +306,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.artyomshilonosov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -332,7 +336,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.artyomshilonosov.Right-on-target";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
