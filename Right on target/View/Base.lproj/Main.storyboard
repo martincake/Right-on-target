@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3NG-Xu-jJj">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,10 +8,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
+        <scene sceneID="X1k-IJ-FhF">
+            <objects>
+                <viewController id="3NG-Xu-jJj" customClass="MainViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u9K-Ei-cxW">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QIU-CJ-EXz">
+                                <rect key="frame" x="248" y="171" width="400" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcM-Zo-Vex">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="72"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Цвета"/>
+                                        <connections>
+                                            <action selector="colorModeSelection" destination="3NG-Xu-jJj" eventType="touchUpInside" id="55s-Gt-sD5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите вариант игры" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMv-Tj-PN7">
+                                        <rect key="frame" x="140" y="0.0" width="120" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Evt-dn-Lf1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efi-rV-Ttz">
+                                        <rect key="frame" x="280" y="0.0" width="120" height="72"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Числа"/>
+                                        <connections>
+                                            <action selector="numberModeSelection" destination="3NG-Xu-jJj" eventType="touchUpInside" id="gGj-2z-nYs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B0j-0X-EcV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QIU-CJ-EXz" firstAttribute="centerY" secondItem="u9K-Ei-cxW" secondAttribute="centerY" id="gtG-NG-FfH"/>
+                            <constraint firstItem="QIU-CJ-EXz" firstAttribute="centerX" secondItem="u9K-Ei-cxW" secondAttribute="centerX" id="hbU-yl-gm9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJv-K4-oSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-421" y="513"/>
+        </scene>
+        <!--Number Mode View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NumberModeViewController" id="BYZ-38-t0r" customClass="NumberModeViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,12 +90,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuF-BI-033">
+                                <rect key="frame" x="64" y="20" width="66" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="returnToMainScreenAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHz-Os-URw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVR-hk-HJH">
+                                <rect key="frame" x="732" y="20" width="100" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Новая игра"/>
+                                <connections>
+                                    <action selector="newGameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNE-Yf-jLH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="K7c-Yq-7dq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2eA-DP-Nzf"/>
                             <constraint firstItem="WSa-MQ-bqO" firstAttribute="top" secondItem="lxD-K4-Am6" secondAttribute="bottom" constant="30" id="C4t-js-xlI"/>
+                            <constraint firstItem="XuF-BI-033" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="O62-OK-gqP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVR-hk-HJH" secondAttribute="trailing" constant="20" id="QWA-JV-8hq"/>
+                            <constraint firstItem="XuF-BI-033" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fjQ-Rm-GtG"/>
+                            <constraint firstItem="YVR-hk-HJH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gmR-we-0cw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XuF-BI-033" secondAttribute="trailing" symbolic="YES" id="mhc-d3-fOA"/>
+                            <constraint firstItem="YVR-hk-HJH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XuF-BI-033" secondAttribute="trailing" constant="8" symbolic="YES" id="ngg-7L-W1E"/>
                             <constraint firstItem="WSa-MQ-bqO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pDy-lv-Al3"/>
                             <constraint firstItem="lxD-K4-Am6" firstAttribute="top" secondItem="K7c-Yq-7dq" secondAttribute="bottom" constant="30" id="r6A-nM-nRA"/>
                             <constraint firstItem="K7c-Yq-7dq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tKG-Np-0Vi"/>
@@ -60,12 +133,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.669642857142847" y="150.72463768115944"/>
+            <point key="canvasLocation" x="317" y="178"/>
+        </scene>
+        <!--Color Mode View Controller-->
+        <scene sceneID="aj0-rB-Nzk">
+            <objects>
+                <viewController storyboardIdentifier="ColorModeViewController" id="ob8-Me-DKp" customClass="ColorModeViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9F-KE-pMg">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdr-MY-wMv">
+                                <rect key="frame" x="64" y="20" width="65.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="returnToMainScreenAction" destination="ob8-Me-DKp" eventType="touchUpInside" id="m3d-Od-MHo"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="FTE-Ny-THI">
+                                <rect key="frame" x="168" y="133.5" width="560" height="147.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Попробуй угадать цвет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evk-P3-Tiw">
+                                        <rect key="frame" x="187.5" y="0.0" width="185.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="kMp-j1-hht">
+                                        <rect key="frame" x="0.0" y="116.5" width="560" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qX-bY-T0l">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="31"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Вариант 1"/>
+                                                <connections>
+                                                    <action selector="colorButtonsAction:" destination="ob8-Me-DKp" eventType="touchUpInside" id="ufs-1F-1Qw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-rF-ajL">
+                                                <rect key="frame" x="155.5" y="0.0" width="93.5" height="31"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Вариант 2"/>
+                                                <connections>
+                                                    <action selector="colorButtonsAction:" destination="ob8-Me-DKp" eventType="touchUpInside" id="sU5-Fq-327"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-Fn-1rp">
+                                                <rect key="frame" x="311" y="0.0" width="93.5" height="31"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Вариант 3"/>
+                                                <connections>
+                                                    <action selector="colorButtonsAction:" destination="ob8-Me-DKp" eventType="touchUpInside" id="K0c-xy-NLE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAr-6O-ah9">
+                                                <rect key="frame" x="466.5" y="0.0" width="93.5" height="31"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Вариант 4"/>
+                                                <connections>
+                                                    <action selector="colorButtonsAction:" destination="ob8-Me-DKp" eventType="touchUpInside" id="xg8-Tw-8PA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                        <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                        <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                        <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rjd-6v-nIF"/>
+                        <color key="backgroundColor" red="0.3695121408" green="0.77657896280000005" blue="0.94608956580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rjd-6v-nIF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fdr-MY-wMv" secondAttribute="trailing" symbolic="YES" id="2WK-GH-gcp"/>
+                            <constraint firstItem="Fdr-MY-wMv" firstAttribute="top" secondItem="rjd-6v-nIF" secondAttribute="top" constant="20" id="Sxo-FF-OeP"/>
+                            <constraint firstItem="Fdr-MY-wMv" firstAttribute="leading" secondItem="rjd-6v-nIF" secondAttribute="leading" constant="20" id="hPl-3w-b13"/>
+                            <constraint firstItem="FTE-Ny-THI" firstAttribute="centerX" secondItem="G9F-KE-pMg" secondAttribute="centerX" id="lEU-Cq-Qr2"/>
+                            <constraint firstItem="FTE-Ny-THI" firstAttribute="centerY" secondItem="G9F-KE-pMg" secondAttribute="centerY" id="m8t-Q8-n6i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hexLabel" destination="evk-P3-Tiw" id="JoL-r2-qHS"/>
+                        <outlet property="option1" destination="0qX-bY-T0l" id="YCJ-YY-bGm"/>
+                        <outlet property="option2" destination="FdU-rF-ajL" id="6rG-Ww-i3t"/>
+                        <outlet property="option3" destination="nvR-Fn-1rp" id="uZZ-ke-Lum"/>
+                        <outlet property="option4" destination="vAr-6O-ah9" id="d0E-uo-7Jv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxl-ZI-eQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="864"/>
         </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

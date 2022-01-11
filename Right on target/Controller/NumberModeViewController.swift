@@ -1,13 +1,10 @@
-//
-//  ViewController.swift
-//  Right on target
-//
-//  Created by Артём Шилоносов on 09.01.2022.
-//
+/**
+ Контроллер экрана игры по угадыванию положения слайдера
+ */
 
 import UIKit
 
-class ViewController: UIViewController {
+class NumberModeViewController: UIViewController {
 
     // сущность "Игра"
     var game: Game!
@@ -61,6 +58,21 @@ class ViewController: UIViewController {
         print("viewDidDisappear")
     }
     
+    //MARK: - Возврат на главный экран
+    
+    @IBAction func returnToMainScreenAction() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: - Начало новой игры
+    
+    @IBAction func newGameAction() {
+        
+        // перезапускаем игру
+        game.restartGame()
+        // обновляем загаданное число на экране
+        updateLabelWithSecretNumber(newText: String(game.currentRound.currentSecretValue))
+    }
     
     //MARK: - Взаимодействие View - Model
     
